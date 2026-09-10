@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedIntel — Medication Intelligence for Proactive Healthcare Operations</title>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Chart.js for visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/static/css/styles.css?v=3.1">
+</head>
+<body>
+
+  <!-- App Wrapper: Left Sidebar + Center Content + Right Copilot -->
+  <div class="app-container">
+    
+    <!-- LEFT SIDEBAR NAVIGATION -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-logo">
+        <div class="logo-box">
+          <i data-lucide="activity" class="logo-icon"></i>
+        </div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <button class="nav-item active" data-tab="tab-home" title="Home">
+          <i data-lucide="home"></i>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-tab="tab-risks" title="Medication Risks">
+          <i data-lucide="shield-alert"></i>
+          <span>Risks</span>
+        </button>
+        <button class="nav-item" data-tab="tab-opportunities" title="Opportunities & Rebalancing">
+          <i data-lucide="refresh-cw"></i>
+          <span>Opportunities</span>
+        </button>
+        <button class="nav-item" data-tab="tab-what-if" title="What-If Simulator">
+          <i data-lucide="trending-up"></i>
+          <span>What-If</span>
+        </button>
+        <button class="nav-item" data-tab="tab-suppliers" title="Suppliers">
+          <i data-lucide="truck"></i>
+          <span>Suppliers</span>
+        </button>
+        <button class="nav-item" id="sidebar-copilot-btn" title="Ask MedIntel">
+          <i data-lucide="sparkles"></i>
+          <span>Ask MedIntel</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="nav-item-subtle" title="Settings">
+          <i data-lucide="settings"></i>
+          <span>Settings</span>
+        </button>
+        <button class="nav-item-subtle" title="Collapse Sidebar">
+          <i data-lucide="chevrons-left"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- CENTER MAIN WORKSPACE -->
+    <main class="main-workspace">
+      
+      <!-- Top Application Header Bar -->
+      <header class="app-topbar">
+        <div class="topbar-branding">
+          <div class="brand-badge-icon">
+            <i data-lucide="activity"></i>
+          </div>
+          <div>
+            <h1 class="topbar-title">MedIntel</h1>
+            <p class="topbar-sub">Medication Intelligence for Proactive Healthcare Operations</p>
+          </div>
+        </div>
+
+        <div class="topbar-controls">
+          <!-- Facility Global Dropdown -->
+          <div class="facility-dropdown">
+            <i data-lucide="building" class="facility-icon"></i>
+            <select id="global-facility-select" aria-label="Select Facility">
+              <option value="">All Facilities (Network View)</option>
+            </select>
+          </div>
+
+          <!-- Snapshot Status Pill -->
+          <div class="snapshot-pill">
+            <span class="live-status-dot"></span>
+            <span id="snapshot-date-text">Snapshot: 2026-08-31</span>
+          </div>
+
+          <!-- User Avatar -->
+          <div class="user-avatar" title="Padmaja - Pharmacy Director">
+            PS
+          </div>
+        </div>
+      </header>
+
+      <!-- TAB 1: HOME (EXECUTIVE CURATED DASHBOARD MATCHING SCREENSHOT) -->
+      <div id="tab-home" class="view-panel active">
+        
+        <!-- Hero Greeting Banner with 3D Visual Accent -->
+        <section class="hero-greeting-section">
+          <div class="hero-text-content">
+            <h2 class="greeting-heading">Good morning, Padmaja <span class="wave-hand">👋</span></h2>
+            <p class="greeting-sub">
+              MedIntel analyzed your network and found <strong class="text-highlight" id="hero-attention-count">3 things</strong> that deserve your attention today.
+            </p>
+          </div>
+          
+          <div class="hero-decorative-visual">
+            <div class="glass-orb-container">
+              <div class="orb-platform"></div>
+              <div class="glass-cylinder">
+                <div class="liquid-glow"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3 Focus Action Cards (ACT, WATCH, OPPORTUNITY) -->
+        <section class="focus-cards-grid">
+          
+          <!-- Card 1: ACT (Immediate Risk) -->
+          <div class="focus-card card-act" onclick="openScenarioDetail('MED001', 'LOC006')">
+            <div class="card-tag tag-act">
+              <i data-lucide="alert-triangle"></i> ACT
+            </div>
+            <div class="card-focus-title">1 Immediate Risk</div>
+            <h3 class="card-med-name">Norepinephrine</h3>
+            <p class="card-loc-name">Valley Regional Trauma Center</p>
+            
+            <!-- Sparkline Trend Canvas -->
+            <div class="sparkline-box">
+              <canvas id="sparkline-act" height="42"></canvas>
+            </div>
+
+            <div class="card-metric-banner banner-act">
+              <span class="metric-lead">0.0 days estimated supply</span>
+              <span class="metric-sub">Demand &uarr; 17% &bull; Supplier delayed</span>
+            </div>
+
+            <div class="card-action-link link-act">
+              See why <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Card 2: WATCH (Emerging Risk) -->
+          <div class="focus-card card-watch" onclick="openScenarioDetail('MED022', 'LOC002')">
+            <div class="card-tag tag-watch">
+              <i data-lucide="eye"></i> WATCH
+            </div>
+            <div class="card-focus-title">1 Emerging Risk</div>
+            <h3 class="card-med-name">Meropenem</h3>
+            <p class="card-loc-name">North Suburban General Hospital</p>
+            
+            <!-- Sparkline Trend Canvas -->
+            <div class="sparkline-box">
+              <canvas id="sparkline-watch" height="42"></canvas>
+            </div>
+
+            <div class="card-metric-banner banner-watch">
+              <span class="metric-lead">Demand accelerating</span>
+              <span class="metric-sub">+76% vs last 30 days</span>
+            </div>
+
+            <div class="card-action-link link-watch">
+              Explore <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Card 3: OPPORTUNITY (Network Rebalancing) -->
+          <div class="focus-card card-opportunity" onclick="openScenarioDetail('MED008', 'LOC005')">
+            <div class="card-tag tag-opportunity">
+              <i data-lucide="arrow-left-right"></i> OPPORTUNITY
+            </div>
+            <div class="card-focus-title">1 Opportunity Found</div>
+            <h3 class="card-med-name">Dexmedetomidine</h3>
+            <p class="card-loc-name">2 facilities involved</p>
+            
+            <!-- Visual Rebalance Transfer Diagram -->
+            <div class="transfer-diagram-box">
+              <div class="transfer-node node-surplus" title="Central AMC: Surplus 1,756 units (45.8 DOS)">
+                <i data-lucide="building-2"></i>
+              </div>
+              <div class="transfer-arrow-track">
+                <span class="transfer-dot dot-1"></span>
+                <span class="transfer-dot dot-2"></span>
+                <span class="transfer-dot dot-3"></span>
+                <i data-lucide="chevron-right" class="track-arrow"></i>
+              </div>
+              <div class="transfer-node node-deficit" title="Westside Community: 0.0 DOS">
+                <i data-lucide="building"></i>
+              </div>
+            </div>
+
+            <div class="card-metric-banner banner-opportunity">
+              <span class="metric-lead">Potential inventory rebalancing</span>
+              <span class="metric-sub">Surplus at one location, deficit at another</span>
+            </div>
+
+            <div class="card-action-link link-opportunity">
+              See opportunity <i data-lucide="arrow-right"></i>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Network at a Glance Section (Donut Chart + Interactive Network Map) -->
+        <section class="network-glance-card">
+          <div class="network-card-header">
+            <h3 class="network-title">Your Medication Supply Network at a Glance</h3>
+            <button class="link-btn" onclick="switchTab('tab-risks')">View network &rarr;</button>
+          </div>
+
+          <div class="network-glance-body">
+            
+            <!-- Left Donut Stat Widget -->
+            <div class="network-donut-widget">
+              <div class="donut-chart-container">
+                <canvas id="network-donut-chart"></canvas>
+                <div class="donut-center-text">
+                  <span class="donut-number" id="donut-total-facs">7</span>
+                  <span class="donut-label">Facilities</span>
+                </div>
+              </div>
+
+              <div class="donut-legend">
+                <div class="legend-row">
+                  <span class="legend-bullet bullet-healthy"></span>
+                  <span class="legend-count" id="legend-healthy-count">3</span>
+                  <span class="legend-name">Healthy</span>
+                </div>
+                <div class="legend-row">
+                  <span class="legend-bullet bullet-monitor"></span>
+                  <span class="legend-count" id="legend-monitor-count">2</span>
+                  <span class="legend-name">Monitor</span>
+                </div>
+                <div class="legend-row">
+                  <span class="legend-bullet bullet-risk"></span>
+                  <span class="legend-count" id="legend-risk-count">2</span>
+                  <span class="legend-name">At Risk</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Interactive Network Map -->
+            <div class="network-map-container">
+              <div class="network-map-canvas" id="network-map-nodes">
+                <!-- SVG Connections Background -->
+                <svg class="map-connections-svg" viewBox="0 0 500 180">
+                  <path d="M 90 70 Q 180 30 250 85" class="map-link-line" />
+                  <path d="M 250 85 Q 330 140 420 110" class="map-link-line active-transfer" />
+                  <path d="M 250 85 Q 360 40 450 65" class="map-link-line" />
+                  <path d="M 90 70 Q 150 140 220 130" class="map-link-line" />
+                </svg>
+
+                <!-- Interactive Facility Nodes -->
+                <div class="map-node node-amc" style="left: 18%; top: 38%;" data-facility="LOC001" title="Central Academic Medical Center (Surplus Hub)">
+                  <span class="node-ring ring-green"></span>
+                  <span class="node-core core-green"></span>
+                </div>
+
+                <div class="map-node node-north" style="left: 48%; top: 46%;" data-facility="LOC002" title="North Suburban General Hospital (Emerging Surge)">
+                  <span class="node-ring ring-orange"></span>
+                  <span class="node-core core-orange"></span>
+                </div>
+
+                <div class="map-node node-metro" style="left: 88%; top: 35%;" data-facility="LOC003" title="Metro Memorial Health - Main (Lead-Time Surge)">
+                  <span class="node-ring ring-orange"></span>
+                  <span class="node-core core-orange"></span>
+                </div>
+
+                <div class="map-node node-stjude" style="left: 42%; top: 72%;" data-facility="LOC004" title="St. Jude Children's Pavilion (PO Protected)">
+                  <span class="node-ring ring-green"></span>
+                  <span class="node-core core-green"></span>
+                </div>
+
+                <div class="map-node node-westside" style="left: 70%; top: 78%;" data-facility="LOC005" title="Westside Community Hospital (Deficit)">
+                  <span class="node-ring ring-red"></span>
+                  <span class="node-core core-red"></span>
+                </div>
+
+                <div class="map-node node-trauma" style="left: 82%; top: 60%;" data-facility="LOC006" title="Valley Regional Trauma Center (Critical Shortage)">
+                  <span class="node-ring ring-red pulse-animation"></span>
+                  <span class="node-core core-red"></span>
+                </div>
+
+                <!-- Hover Card Preview -->
+                <div class="map-floating-popover" id="map-popover">
+                  <div class="popover-header">
+                    <span class="popover-title" id="popover-fac-name">Trauma Center</span>
+                    <span class="badge badge-critical" id="popover-fac-badge">High Risk</span>
+                  </div>
+                  <div class="popover-items" id="popover-fac-desc">&bull; 3 critical items diagnosed</div>
+                  <a href="javascript:void(0)" class="popover-link" onclick="openScenarioDetail('MED001', 'LOC006')">View details &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Bottom MedIntel Insight Pill -->
+        <section class="insight-banner-card">
+          <div class="insight-content">
+            <div class="insight-icon-box">
+              <i data-lucide="lightbulb" class="icon-bulb"></i>
+            </div>
+            <div class="insight-text">
+              <strong class="insight-title">MedIntel Insight</strong>
+              <span class="insight-body">Demand acceleration can create supply risk before inventory reaches zero.</span>
+            </div>
+          </div>
+          <button class="insight-action-btn" onclick="openScenarioDetail('MED022', 'LOC002')">
+            Why this matters &rarr;
+          </button>
+        </section>
+
+      </div>
+
+      <!-- TAB 2: MEDICATION RISKS TABLE VIEW -->
+      <div id="tab-risks" class="view-panel">
+        <div class="content-box">
+          <div class="box-header">
+            <div>
+              <h2 class="box-title">Medication Risk Intelligence</h2>
+              <p class="box-sub">Ranked operational risk across 525 facility-medication SKUs</p>
+            </div>
+            <span id="risk-count-badge" class="pill-badge">525 SKUs Monitored</span>
+          </div>
+
+          <!-- Filter Toolbar -->
+          <div class="filter-toolbar">
+            <div class="search-input-wrap">
+              <i data-lucide="search" class="search-icon"></i>
+              <input type="text" id="risk-search-input" placeholder="Search medication name, ID, or facility...">
+            </div>
+
+            <div class="filter-controls">
+              <select id="filter-risk-level" aria-label="Filter Risk Level">
+                <option value="">All Risk Levels</option>
+                <option value="CRITICAL">🔴 Critical</option>
+                <option value="HIGH">🟠 High</option>
+                <option value="MEDIUM">🟡 Medium</option>
+                <option value="LOW">🟢 Low</option>
+              </select>
+
+              <select id="filter-therapeutic-class" aria-label="Filter Therapeutic Class">
+                <option value="">All Classes</option>
+              </select>
+
+              <select id="filter-criticality" aria-label="Filter Criticality">
+                <option value="">All Criticality</option>
+                <option value="High">High Criticality</option>
+                <option value="Medium">Medium Criticality</option>
+                <option value="Low">Low Criticality</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Risk Data Table (6 Harmonious Proportions) -->
+          <div class="table-container">
+            <table class="clean-table" id="risks-table">
+              <thead>
+                <tr>
+                  <th style="width: 24%;">Medication & Class</th>
+                  <th style="width: 18%;">Facility</th>
+                  <th style="width: 15%;">Risk Assessment</th>
+                  <th style="width: 12%;">Days of Supply</th>
+                  <th style="width: 16%;">Stockout Horizon</th>
+                  <th class="col-action" style="width: 15%; min-width: 110px;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="risks-table-body">
+                <tr><td colspan="6" class="text-center py-4">Loading medication intelligence...</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination-bar">
+            <span id="pagination-info">Showing 1 to 20 of 525 SKUs</span>
+            <div class="pagination-buttons">
+              <button id="btn-prev-page" class="btn btn-sm btn-outline" disabled>&larr; Previous</button>
+              <button id="btn-next-page" class="btn btn-sm btn-outline">Next &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: OPPORTUNITIES & REBALANCING -->
+      <div id="tab-opportunities" class="view-panel">
+        <div class="content-box">
+          <div class="box-header">
+            <div>
+              <h2 class="box-title">Network Rebalancing & Expiry Salvage</h2>
+              <p class="box-sub">Identified inter-facility surplus/deficit pairs and high-value batch write-off avoidance</p>
+            </div>
+            <span class="badge badge-success" id="opps-total-value">Total Value at Stake: $--</span>
+          </div>
+
+          <h3 class="subheading mt-3">🔄 Inter-Facility Lateral Stock Rebalancing Pairs</h3>
+          <div class="table-container">
+            <table class="clean-table" id="table-rebalancing">
+              <thead>
+                <tr>
+                  <th>Medication</th>
+                  <th>Deficit Facility</th>
+                  <th>Deficit DOS</th>
+                  <th>Surplus Facility</th>
+                  <th>Surplus DOS</th>
+                  <th>Rec. Transfer</th>
+                  <th>Cost Avoidance</th>
+                  <th>Action Directive</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-rebalancing">
+                <tr><td colspan="8" class="text-center py-3">Scanning network for lateral transfers...</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="subheading mt-4">⏳ Near-Expiry Batch Salvage Opportunities</h3>
+          <div class="table-container">
+            <table class="clean-table" id="table-expiry-opps">
+              <thead>
+                <tr>
+                  <th>Lot ID</th>
+                  <th>Medication</th>
+                  <th>Current Facility</th>
+                  <th>Expiry Date</th>
+                  <th>Days Left</th>
+                  <th>At-Risk Qty</th>
+                  <th>Financial Exposure</th>
+                  <th>Recommended Salvage Action</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-expiry-opps">
+                <tr><td colspan="8" class="text-center py-3">Scanning lots for shelf-life collisions...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: WHAT-IF WORKBENCH -->
+      <div id="tab-what-if" class="view-panel">
+        <div class="content-box">
+          <div class="box-header">
+            <div>
+              <h2 class="box-title">Interactive What-If Scenario Workbench</h2>
+              <p class="box-sub">Simulate operational perturbations with non-destructive live calculations</p>
+            </div>
+          </div>
+
+          <div class="what-if-split-layout">
+            
+            <!-- Controls Form -->
+            <div class="what-if-form-panel">
+              <h4 class="form-section-title">1. Target Selection</h4>
+              <div class="input-field-group">
+                <label for="whatif-med-select">Medication</label>
+                <select id="whatif-med-select" class="select-field">
+                  <option value="MED022">Meropenem (MED022) — Emerging Surge</option>
+                  <option value="MED001">Norepinephrine (MED001) — Critical Vasopressor</option>
+                  <option value="MED008">Dexmedetomidine (MED008) — Network Imbalance</option>
+                  <option value="MED057">Insulin Glargine (MED057) — Supplier Delay</option>
+                  <option value="MED021">Vancomycin HCl (MED021) — False Alarm</option>
+                  <option value="MED039">Alteplase tPA (MED039) — High-Cost Expiry</option>
+                </select>
+              </div>
+
+              <div class="input-field-group mt-2">
+                <label for="whatif-loc-select">Facility</label>
+                <select id="whatif-loc-select" class="select-field">
+                  <option value="LOC002">North Suburban General Hospital (LOC002)</option>
+                  <option value="LOC006">Valley Regional Trauma Center (LOC006)</option>
+                  <option value="LOC005">Westside Community Hospital (LOC005)</option>
+                  <option value="LOC001">Central Academic Medical Center (LOC001)</option>
+                  <option value="LOC003">Metro Memorial Health - Main (LOC003)</option>
+                  <option value="LOC004">St. Jude Children's Pavilion (LOC004)</option>
+                  <option value="LOC007">South Ambulatory & Surgical Center (LOC007)</option>
+                </select>
+              </div>
+
+              <h4 class="form-section-title mt-3">2. 1-Click Scenario Presets</h4>
+              <div class="preset-grid">
+                <button type="button" class="preset-chip" onclick="applyWhatIfPreset('surge')">⚡ +50% Demand Surge</button>
+                <button type="button" class="preset-chip" onclick="applyWhatIfPreset('transfer')">⚡ +150 Units Transfer</button>
+                <button type="button" class="preset-chip" onclick="applyWhatIfPreset('delay')">⚡ +12d Supplier Delay</button>
+                <button type="button" class="preset-chip" onclick="applyWhatIfPreset('reset')">🔄 Reset Baseline</button>
+              </div>
+
+              <h4 class="form-section-title mt-3">3. Perturbation Sliders</h4>
+              
+              <div class="slider-box">
+                <div class="slider-meta">
+                  <span>Daily Demand Change</span>
+                  <strong class="slider-display" id="val-demand-change">+0%</strong>
+                </div>
+                <input type="range" id="slider-demand-change" min="-50" max="150" step="5" value="0">
+              </div>
+
+              <div class="slider-box">
+                <div class="slider-meta">
+                  <span>Supplier Delivery Delay</span>
+                  <strong class="slider-display" id="val-supplier-delay">+0 days</strong>
+                </div>
+                <input type="range" id="slider-supplier-delay" min="0" max="30" step="1" value="0">
+              </div>
+
+              <div class="slider-box">
+                <div class="slider-meta">
+                  <span>Inventory Adjustment</span>
+                  <strong class="slider-display" id="val-inventory-change">0%</strong>
+                </div>
+                <input type="range" id="slider-inventory-change" min="-80" max="100" step="5" value="0">
+              </div>
+
+              <div class="slider-box">
+                <div class="slider-meta">
+                  <span>Lateral Stock Transfer</span>
+                  <strong class="slider-display" id="val-transfer-units">+0 units</strong>
+                </div>
+                <input type="range" id="slider-transfer-units" min="0" max="500" step="10" value="0">
+              </div>
+
+              <button id="btn-run-whatif" class="btn btn-primary btn-block mt-3">
+                <i data-lucide="play"></i> Run What-If Simulation
+              </button>
+            </div>
+
+            <!-- Comparison & Impact Output -->
+            <div class="what-if-output-panel">
+              <div class="output-cards-grid">
+                
+                <!-- Baseline Card -->
+                <div class="sim-card sim-card-base">
+                  <span class="sim-badge badge-neutral">CURRENT BASELINE</span>
+                  <h4 class="sim-drug-title" id="base-med-title">Meropenem</h4>
+                  <p class="sim-fac-sub" id="base-loc-sub">North Suburban General</p>
+                  
+                  <div class="sim-metrics-list">
+                    <div class="metric-row"><span>On-Hand Inventory:</span><strong id="base-qoh">567 units</strong></div>
+                    <div class="metric-row"><span>Days of Supply:</span><strong id="base-dos">14.3 days</strong></div>
+                    <div class="metric-row"><span>Daily Burn Rate:</span><strong id="base-burn">44.0 /day</strong></div>
+                    <div class="metric-row"><span>Projected Stockout:</span><strong id="base-stockout">2026-09-12 (12.9d)</strong></div>
+                    <div class="metric-row"><span>Risk Tier:</span><span class="badge badge-medium" id="base-risk-badge">MEDIUM (48.0)</span></div>
+                  </div>
+                </div>
+
+                <!-- Scenario Card -->
+                <div class="sim-card sim-card-scenario">
+                  <span class="sim-badge badge-primary">SIMULATED SCENARIO</span>
+                  <h4 class="sim-drug-title" id="sim-med-title">Meropenem</h4>
+                  <p class="sim-fac-sub" id="sim-loc-sub">Perturbed State</p>
+                  
+                  <div class="sim-metrics-list">
+                    <div class="metric-row"><span>Simulated Inventory:</span><strong id="sim-qoh">567 units</strong></div>
+                    <div class="metric-row"><span>Simulated DOS:</span><strong id="sim-dos">14.3 days</strong></div>
+                    <div class="metric-row"><span>Simulated Burn:</span><strong id="sim-burn">44.0 /day</strong></div>
+                    <div class="metric-row"><span>Simulated Stockout:</span><strong id="sim-stockout">2026-09-12 (12.9d)</strong></div>
+                    <div class="metric-row"><span>Simulated Risk:</span><span class="badge badge-medium" id="sim-risk-badge">MEDIUM (48.0)</span></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Impact Banner -->
+              <div class="impact-card" id="whatif-impact-banner">
+                <div class="impact-top">
+                  <div class="impact-flow-text" id="impact-transition-text">MEDIUM RISK &rarr; HIGH RISK</div>
+                  <div class="impact-dos-badge" id="impact-dos-delta">&Delta; -7.6 Days Supply</div>
+                </div>
+                <p class="impact-body-text" id="impact-explanation-text">
+                  Demand surge increases burn rate, accelerating stockout by 6.2 days.
+                </p>
+                <div class="impact-directive-box">
+                  <i data-lucide="stethoscope"></i>
+                  <span id="impact-clinical-text">Operational recommendation will appear here.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 5: SUPPLIERS -->
+      <div id="tab-suppliers" class="view-panel">
+        <div class="content-box">
+          <div class="box-header">
+            <div>
+              <h2 class="box-title">Supplier Intelligence & Disruption Holds</h2>
+              <p class="box-sub">Distributor lead-time surges, reliability ratings, and packaging line disruptions</p>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="clean-table" id="suppliers-table">
+              <thead>
+                <tr>
+                  <th>Supplier ID</th>
+                  <th>Supplier Name</th>
+                  <th>Drugs Supplied</th>
+                  <th>Standard Lead Time</th>
+                  <th>Current Lead Time</th>
+                  <th>Lead Time Surge</th>
+                  <th>Reliability</th>
+                  <th>Active Disruptions</th>
+                  <th>Delayed Orders</th>
+                </tr>
+              </thead>
+              <tbody id="suppliers-table-body">
+                <tr><td colspan="9" class="text-center py-3">Loading supplier metrics...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- RIGHT INTEGRATED AI COPILOT: "Ask MedIntel" (EXACTLY MATCHING SCREENSHOT) -->
+    <aside class="copilot-panel" id="copilot-panel">
+      
+      <div class="copilot-header">
+        <div class="copilot-header-brand">
+          <div class="copilot-spark-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <div>
+            <h3 class="copilot-main-title">Ask MedIntel</h3>
+            <p class="copilot-sub-title">Your AI assistant for medication intelligence</p>
+          </div>
+        </div>
+        <button class="copilot-min-btn" id="btn-minimize-copilot" title="Minimize">&mdash;</button>
+      </div>
+
+      <!-- Intro Explanation Bubble -->
+      <div class="copilot-intro-box">
+        <p>Ask anything about your medication supply network. I'll investigate and give you clear answers.</p>
+      </div>
+
+      <!-- Suggested Question Pills -->
+      <div class="copilot-suggestions-section">
+        <span class="try-asking-label">Try asking:</span>
+        <div class="suggestions-list">
+          
+          <button class="suggestion-item" onclick="sendCopilotQuery('What should I worry about today?')">
+            <i data-lucide="alert-triangle" class="sugg-icon icon-red"></i>
+            <span>What should I worry about today?</span>
+          </button>
+
+          <button class="suggestion-item" onclick="sendCopilotQuery('Why is Norepinephrine at risk?')">
+            <i data-lucide="bar-chart-2" class="sugg-icon icon-purple"></i>
+            <span>Why is Norepinephrine at risk?</span>
+          </button>
+
+          <button class="suggestion-item" onclick="sendCopilotQuery('Which risks are emerging?')">
+            <i data-lucide="trending-up" class="sugg-icon icon-orange"></i>
+            <span>Which risks are emerging?</span>
+          </button>
+
+          <button class="suggestion-item" onclick="sendCopilotQuery('Where do we have excess inventory?')">
+            <i data-lucide="refresh-cw" class="sugg-icon icon-green"></i>
+            <span>Where do we have excess inventory?</span>
+          </button>
+
+          <button class="suggestion-item" onclick="sendCopilotQuery('What happens if demand increases 20%?')">
+            <i data-lucide="flask-conical" class="sugg-icon icon-blue"></i>
+            <span>What happens if demand increases 20%?</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Live Chat Transcript Stream -->
+      <div class="copilot-stream-container" id="copilot-messages-container">
+        <!-- Messages will append here -->
+      </div>
+
+      <!-- Bottom Chat Input Area -->
+      <div class="copilot-bottom-input">
+        <form id="copilot-form" onsubmit="event.preventDefault(); handleCopilotSubmit();">
+          <div class="chat-input-pill">
+            <input type="text" id="copilot-input" placeholder="Ask your question..." autocomplete="off">
+            <button type="submit" id="btn-copilot-send" class="send-plane-btn" title="Send Question">
+              <i data-lucide="send"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="copilot-guardrail-footer">
+          <i data-lucide="shield-check"></i>
+          <span>MedIntel uses your data to provide grounded, explainable answers.</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Comprehensive Medication Diagnostic Modal -->
+  <div id="med-detail-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-card-header">
+        <div>
+          <div class="modal-tag-row">
+            <span class="badge" id="modal-risk-badge">CRITICAL</span>
+            <span class="badge badge-neutral" id="modal-crit-badge">High Criticality</span>
+            <span class="badge badge-neutral" id="modal-class-badge">Therapeutic Class</span>
+          </div>
+          <h2 class="modal-drug-title" id="modal-drug-name">Norepinephrine Bitartrate</h2>
+          <p class="modal-drug-subtitle" id="modal-drug-sub">4 mg/4 mL &bull; Injectable Solution &bull; $14.50/unit</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeMedModal()">&times;</button>
+      </div>
+
+      <div class="modal-card-body">
+        
+        <div class="modal-facility-picker">
+          <label for="modal-facility-select">Facility View:</label>
+          <select id="modal-facility-select" class="select-field" onchange="renderSelectedFacilityDiagnostic()">
+          </select>
+        </div>
+
+        <div class="modal-stats-row">
+          <div class="stat-cell"><span class="lbl">On-Hand Stock</span><strong class="val" id="mstat-qoh">--</strong></div>
+          <div class="stat-cell"><span class="lbl">Days of Supply</span><strong class="val" id="mstat-dos">--</strong></div>
+          <div class="stat-cell"><span class="lbl">7d Daily Usage</span><strong class="val" id="mstat-adu">--</strong></div>
+          <div class="stat-cell"><span class="lbl">Velocity Trend</span><strong class="val" id="mstat-trend">--</strong></div>
+          <div class="stat-cell"><span class="lbl">Stockout Horizon</span><strong class="val" id="mstat-stockout">--</strong></div>
+          <div class="stat-cell"><span class="lbl">Risk Score</span><strong class="val" id="mstat-score">--</strong></div>
+        </div>
+
+        <!-- 365-Day Historical Chart -->
+        <div class="modal-chart-box">
+          <h4 class="box-heading"><i data-lucide="line-chart"></i> Historical Dispensing Velocity & 60-Day Forward Trajectory</h4>
+          <div class="chart-canvas-wrap">
+            <canvas id="modal-util-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Diagnosis & Recommendations -->
+        <div class="modal-diagnosis-box">
+          <h4 class="box-heading"><i data-lucide="stethoscope"></i> Operational Risk Diagnosis</h4>
+          <div class="diag-line"><strong>Primary Drivers:</strong> <span id="mfactor-primary">--</span></div>
+          <div class="diag-line"><strong>Contributing Factors:</strong> <span id="mfactor-contrib">--</span></div>
+          <div class="diag-line"><strong>Mitigating Signals:</strong> <span id="mfactor-mitig">--</span></div>
+          
+          <div class="action-rec-card mt-2">
+            <div class="rec-header"><i data-lucide="check-circle-2"></i> Action Directive:</div>
+            <p id="mfactor-rec">--</p>
+          </div>
+        </div>
+
+        <!-- Open POs & Sister Surplus -->
+        <div class="modal-sub-tables-grid">
+          <div class="sub-table-block">
+            <h5><i data-lucide="truck"></i> Inbound Purchase Orders</h5>
+            <div class="table-container">
+              <table class="clean-table" id="modal-po-table">
+                <thead>
+                  <tr><th>PO ID</th><th>Order Date</th><th>Expected</th><th>Quantity</th><th>Status</th></tr>
+                </thead>
+                <tbody id="modal-po-tbody"><tr><td colspan="5" class="text-center">No active POs</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="sub-table-block">
+            <h5><i data-lucide="arrow-left-right"></i> Sister Facility Surplus Stock</h5>
+            <div class="table-container">
+              <table class="clean-table" id="modal-surplus-table">
+                <thead>
+                  <tr><th>Sister Location</th><th>Stock</th><th>DOS</th><th>Transfer Potential</th></tr>
+                </thead>
+                <tbody id="modal-surplus-tbody"><tr><td colspan="4" class="text-center">No sister surplus</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-card-footer">
+        <button class="btn btn-outline" onclick="closeMedModal()">Close</button>
+        <button class="btn btn-primary" id="btn-modal-simulate-whatif">
+          <i data-lucide="trending-up"></i> Simulate in What-If
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/static/js/charts.js?v=3.0"></script>
+  <script src="/static/js/copilot.js?v=3.0"></script>
+  <script src="/static/js/app.js?v=3.0"></script>
+</body>
+</html>

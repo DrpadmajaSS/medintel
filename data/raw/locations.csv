@@ -1,0 +1,8 @@
+location_id,location_name,location_type,region
+LOC001,Central Academic Medical Center,Academic Medical Center,Central Metro
+LOC002,North Suburban General Hospital,Community Hospital,North Suburban
+LOC003,Metro Memorial Health - Main,General Hospital,Central Metro
+LOC004,St. Jude Children's Pavilion,Children's Hospital,South Metro
+LOC005,Westside Community Hospital,Community Hospital,West Valley
+LOC006,Valley Regional Trauma Center,Trauma Center,West Valley
+LOC007,South Ambulatory & Surgical Center,Ambulatory Surgical Center,South Metro

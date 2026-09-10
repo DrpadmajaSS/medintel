@@ -1,0 +1,33 @@
+event_id,supplier_id,medication_id,event_date,event_type,delay_days,description
+EVT-1011,SUP008,MED008,2025-10-02,Quality Recall Hold,9,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Dexmedetomidine Hydrochloride.
+EVT-1003,SUP003,MED022,2025-10-09,Demand Surge Allocation,4,National regional surge triggered distributor allocation caps of 70% order fulfillment. Impacting Meropenem.
+EVT-1006,SUP011,MED047,2025-10-17,Quality Recall Hold,8,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Diltiazem Hydrochloride.
+EVT-1016,SUP002,MED059,2025-10-25,Demand Surge Allocation,4,National regional surge triggered distributor allocation caps of 70% order fulfillment. Impacting Dextrose 50%.
+EVT-1028,SUP009,MED036,2025-10-26,Raw Material Shortage,16,Active Pharmaceutical Ingredient (API) synthesis yield shortfall delayed batch release. Impacting Heparin Sodium.
+EVT-1023,SUP003,MED055,2025-10-28,Quality Recall Hold,18,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Sodium Bicarbonate.
+EVT-1025,SUP010,MED029,2025-11-01,Facility Maintenance,3,Scheduled HVAC and cleanroom annual re-certification temporarily suspended dispatch. Impacting Daptomycin.
+EVT-1012,SUP009,MED010,2025-11-11,Raw Material Shortage,15,Active Pharmaceutical Ingredient (API) synthesis yield shortfall delayed batch release. Impacting Lorazepam.
+EVT-1004,SUP011,MED045,2025-11-21,Quality Recall Hold,17,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Labetalol Hydrochloride.
+EVT-1015,SUP003,MED045,2025-12-02,Facility Maintenance,7,Scheduled HVAC and cleanroom annual re-certification temporarily suspended dispatch. Impacting Labetalol Hydrochloride.
+EVT-1020,SUP006,MED060,2025-12-14,Quality Recall Hold,10,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Glucagon.
+EVT-1027,SUP014,MED064,2025-12-14,Quality Recall Hold,8,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Ondansetron Hydrochloride.
+EVT-1021,SUP015,MED012,2025-12-28,Raw Material Shortage,9,Active Pharmaceutical Ingredient (API) synthesis yield shortfall delayed batch release. Impacting Rocuronium Bromide.
+EVT-1031,SUP001,MED034,2025-12-29,Regulatory Inspection Hold,18,Routine cGMP inspection follow-up audit paused fill-finish lot releases. Impacting Acyclovir Sodium.
+EVT-1009,SUP015,MED059,2026-02-09,Demand Surge Allocation,12,National regional surge triggered distributor allocation caps of 70% order fulfillment. Impacting Dextrose 50%.
+EVT-1013,SUP011,MED035,2026-02-20,Quality Recall Hold,15,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Amikacin Sulfate.
+EVT-1017,SUP011,MED050,2026-02-24,Port Congestion,14,Intermodal maritime container congestion delayed imported precursor chemicals. Impacting Albuterol Sulfate.
+EVT-1007,SUP011,MED071,2026-03-07,Raw Material Shortage,20,Active Pharmaceutical Ingredient (API) synthesis yield shortfall delayed batch release. Impacting Paclitaxel.
+EVT-1029,SUP002,MED001,2026-03-14,Port Congestion,12,Intermodal maritime container congestion delayed imported precursor chemicals. Impacting Norepinephrine Bitartrate.
+EVT-1026,SUP015,MED064,2026-05-10,Port Congestion,6,Intermodal maritime container congestion delayed imported precursor chemicals. Impacting Ondansetron Hydrochloride.
+EVT-1019,SUP013,MED068,2026-05-17,Demand Surge Allocation,9,National regional surge triggered distributor allocation caps of 70% order fulfillment. Impacting Sodium Chloride 0.9%.
+EVT-1014,SUP012,MED070,2026-05-26,Quality Recall Hold,12,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Albumin Human 25%.
+EVT-1018,SUP011,MED016,2026-05-29,Demand Surge Allocation,7,National regional surge triggered distributor allocation caps of 70% order fulfillment. Impacting Fentanyl Citrate.
+EVT-1030,SUP005,MED033,2026-06-15,Facility Maintenance,5,Scheduled HVAC and cleanroom annual re-certification temporarily suspended dispatch. Impacting Micafungin Sodium.
+EVT-1005,SUP015,MED010,2026-07-16,Quality Recall Hold,14,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Lorazepam.
+EVT-1032,SUP012,MED056,2026-07-16,Quality Recall Hold,8,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Insulin Regular Human.
+EVT-1022,SUP007,MED042,2026-07-21,Demand Surge Allocation,7,National regional surge triggered distributor allocation caps of 70% order fulfillment. Impacting Amiodarone Hydrochloride.
+EVT-1024,SUP012,MED028,2026-07-21,Quality Recall Hold,12,Precautionary quarantine for particulate matter verification cleared after secondary testing. Impacting Levofloxacin.
+EVT-1010,SUP004,MED007,2026-07-25,Demand Surge Allocation,9,National regional surge triggered distributor allocation caps of 70% order fulfillment. Impacting Propofol.
+EVT-1008,SUP013,MED013,2026-07-29,Port Congestion,10,Intermodal maritime container congestion delayed imported precursor chemicals. Impacting Vecuronium Bromide.
+EVT-1002,SUP008,MED057,2026-08-10,Packaging Line Disruption,20,Critical automated secondary packaging machinery failure at central production facility resulting in 20-day shipment delay.
+EVT-1001,SUP001,MED001,2026-08-16,Transportation Delay,12,Regional freight hub cryogenic storage disruption and carrier line-haul delay affecting Norepinephrine distribution.

@@ -1,0 +1,76 @@
+medication_id,generic_name,strength,dosage_form,unit_of_measure,therapeutic_class,unit_cost,criticality
+MED001,Norepinephrine Bitartrate,4 mg/4 mL,Injectable Solution,vial,Vasopressor / Inotrope,14.5,High
+MED002,Epinephrine,1 mg/mL (1:1000),Injectable Solution,vial,Emergency / Resuscitation,8.75,High
+MED003,Vasopressin,20 units/mL,Injectable Solution,vial,Vasopressor / Inotrope,85.0,High
+MED004,Dopamine Hydrochloride,400 mg/250 mL,IV Infusion,bag,Vasopressor / Inotrope,22.0,High
+MED005,Dobutamine Hydrochloride,250 mg/250 mL,IV Infusion,bag,Vasopressor / Inotrope,24.5,High
+MED006,Phenylephrine Hydrochloride,10 mg/mL,Injectable Solution,vial,Vasopressor / Inotrope,12.2,High
+MED007,Propofol,10 mg/mL (100 mL),Injectable Emulsion,vial,General Anesthetic / Sedative,18.9,High
+MED008,Dexmedetomidine Hydrochloride,200 mcg/2 mL,Injectable Solution,vial,General Anesthetic / Sedative,34.0,High
+MED009,Midazolam Hydrochloride,5 mg/mL (2 mL),Injectable Solution,vial,Benzodiazepine,4.25,Medium
+MED010,Lorazepam,2 mg/mL,Injectable Solution,vial,Benzodiazepine,5.1,Medium
+MED011,Ketamine Hydrochloride,50 mg/mL (10 mL),Injectable Solution,vial,General Anesthetic / Sedative,15.6,High
+MED012,Rocuronium Bromide,10 mg/mL (5 mL),Injectable Solution,vial,Neuromuscular Blocker,11.8,High
+MED013,Vecuronium Bromide,10 mg,Lyophilized Powder for Injection,vial,Neuromuscular Blocker,14.2,High
+MED014,Cisatracurium Besylate,2 mg/mL (10 mL),Injectable Solution,vial,Neuromuscular Blocker,29.5,High
+MED015,Etomidate,2 mg/mL (10 mL),Injectable Solution,vial,General Anesthetic / Sedative,9.4,High
+MED016,Fentanyl Citrate,100 mcg/2 mL,Injectable Solution,ampule,Opioid Analgesic,3.8,High
+MED017,Hydromorphone Hydrochloride,2 mg/mL,Injectable Solution,vial,Opioid Analgesic,4.5,High
+MED018,Morphine Sulfate,4 mg/mL,Injectable Solution,vial,Opioid Analgesic,3.2,High
+MED019,Acetaminophen IV,1000 mg/100 mL,IV Infusion,vial,Non-Opioid Analgesic,32.0,Medium
+MED020,Ketorolac Tromethamine,30 mg/mL,Injectable Solution,vial,NSAID,2.9,Medium
+MED021,Vancomycin Hydrochloride,1 g,Lyophilized Powder for IV,vial,Antibiotic / Glycopeptide,8.5,High
+MED022,Meropenem,1 g,Powder for Injection,vial,Carbapenem,21.0,High
+MED023,Cefepime Hydrochloride,2 g,Powder for Injection,vial,Cephalosporin,16.5,High
+MED024,Piperacillin and Tazobactam,4.5 g,Powder for Injection,vial,Antibiotic / Penicillin,19.8,High
+MED025,Ceftriaxone Sodium,1 g,Powder for Injection,vial,Cephalosporin,6.2,Medium
+MED026,Cefazolin Sodium,2 g,Powder for Injection,vial,Cephalosporin,5.4,Medium
+MED027,Azithromycin IV,500 mg,Powder for Injection,vial,Antibiotic / Macrolide,11.5,Medium
+MED028,Levofloxacin,500 mg/100 mL,IV Infusion,bag,Fluoroquinolone,14.0,Medium
+MED029,Daptomycin,500 mg,Lyophilized Powder for Injection,vial,Antibiotic / Lipopeptide,145.0,High
+MED030,Linezolid,600 mg/300 mL,IV Infusion,bag,Antibiotic / Oxazolidinone,58.0,High
+MED031,Metronidazole,500 mg/100 mL,IV Infusion,bag,Antibacterial / Antiprotozoal,4.8,Medium
+MED032,Fluconazole,200 mg/100 mL,IV Infusion,bag,Antifungal,13.5,Medium
+MED033,Micafungin Sodium,100 mg,Powder for Injection,vial,Antifungal / Echinocandin,165.0,High
+MED034,Acyclovir Sodium,500 mg,Powder for Injection,vial,Antiviral,28.0,Medium
+MED035,Amikacin Sulfate,500 mg/2 mL,Injectable Solution,vial,Antibiotic / Aminoglycoside,17.5,Medium
+MED036,Heparin Sodium,5000 units/mL,Injectable Solution,vial,Anticoagulant,9.2,High
+MED037,Enoxaparin Sodium,40 mg/0.4 mL,Prefilled Syringe,syringe,Anticoagulant / LMWH,18.4,High
+MED038,Bivalirudin,250 mg,Lyophilized Powder for Injection,vial,Anticoagulant / Direct Thrombin Inhibitor,280.0,High
+MED039,Alteplase (tPA),100 mg,Lyophilized Powder for Injection,vial,Thrombolytic,3100.0,High
+MED040,Protamine Sulfate,10 mg/mL (5 mL),Injectable Solution,vial,Antidote / Heparin Reversal,35.0,High
+MED041,Phytonadione (Vitamin K1),10 mg/mL,Injectable Solution,ampule,Hematologic / Hemostatic,84.0,Medium
+MED042,Amiodarone Hydrochloride,150 mg/3 mL,Injectable Solution,ampule,Cardiovascular / Antiarrhythmic,7.6,High
+MED043,Adenosine,6 mg/2 mL,Injectable Solution,vial,Cardiovascular / Antiarrhythmic,22.5,High
+MED044,Nicardipine Hydrochloride,25 mg/10 mL,Injectable Solution,vial,Cardiovascular / Antihypertensive,46.0,High
+MED045,Labetalol Hydrochloride,5 mg/mL (20 mL),Injectable Solution,vial,Cardiovascular / Beta-Blocker,16.2,High
+MED046,Metoprolol Tartrate IV,5 mg/5 mL,Injectable Solution,vial,Cardiovascular / Beta-Blocker,6.8,Medium
+MED047,Diltiazem Hydrochloride,25 mg/5 mL,Injectable Solution,vial,Cardiovascular / Calcium Channel Blocker,12.4,Medium
+MED048,Nitroglycerin IV,50 mg/250 mL,IV Infusion,bag,Cardiovascular / Vasodilator,31.0,High
+MED049,Furosemide,40 mg/4 mL,Injectable Solution,vial,Diuretic,2.1,Medium
+MED050,Albuterol Sulfate,2.5 mg/3 mL,Inhalation Solution,nebule,Bronchodilator,0.95,Medium
+MED051,Ipratropium Bromide,0.5 mg/2.5 mL,Inhalation Solution,nebule,Bronchodilator / Anticholinergic,1.4,Medium
+MED052,Naloxone Hydrochloride,0.4 mg/mL,Injectable Solution,vial,Antidote / Opioid Antagonist,16.0,High
+MED053,Atropine Sulfate,1 mg/10 mL,Prefilled Syringe,syringe,Emergency / Resuscitation,14.5,High
+MED054,Calcium Chloride,1000 mg/10 mL (10%),Prefilled Syringe,syringe,Electrolyte Solution / Resuscitation,18.0,High
+MED055,Sodium Bicarbonate,8.4% (50 mEq/50 mL),Prefilled Syringe,syringe,Electrolyte Solution / Resuscitation,15.5,High
+MED056,Insulin Regular Human,100 units/mL (10 mL),Injectable Solution,vial,Antidiabetic / Insulin,42.0,High
+MED057,Insulin Glargine,100 units/mL (10 mL),Injectable Solution,vial,Antidiabetic / Insulin,98.0,High
+MED058,Insulin Lispro,100 units/mL (10 mL),Injectable Solution,vial,Antidiabetic / Insulin,88.0,High
+MED059,Dextrose 50%,25 g/50 mL,Prefilled Syringe,syringe,Hypoglycemia Emergency,12.8,High
+MED060,Glucagon,1 mg,Lyophilized Powder with Diluent,kit,Hypoglycemia Emergency,175.0,High
+MED061,Methylprednisolone Sodium Succinate,125 mg,Lyophilized Powder for Injection,vial,Corticosteroid,14.2,Medium
+MED062,Dexamethasone Sodium Phosphate,4 mg/mL,Injectable Solution,vial,Corticosteroid,3.6,Medium
+MED063,Hydrocortisone Sodium Succinate,100 mg,Lyophilized Powder for Injection,vial,Corticosteroid,8.9,Medium
+MED064,Ondansetron Hydrochloride,4 mg/2 mL,Injectable Solution,vial,Antiemetic,2.4,Medium
+MED065,Metoclopramide Hydrochloride,10 mg/2 mL,Injectable Solution,vial,Antiemetic / Prokinetic,3.1,Low
+MED066,Potassium Chloride,20 mEq/100 mL,IV Infusion,bag,Electrolyte Solution,8.2,High
+MED067,Magnesium Sulfate,2 g/50 mL,IV Infusion,bag,Electrolyte Solution,7.5,Medium
+MED068,Sodium Chloride 0.9%,1000 mL,IV Infusion,bag,Intravenous Fluids,2.8,High
+MED069,Lactated Ringer's Solution,1000 mL,IV Infusion,bag,Intravenous Fluids,3.2,High
+MED070,Albumin Human 25%,12.5 g/50 mL,IV Infusion,vial,Plasma Volume Expander,65.0,High
+MED071,Paclitaxel,100 mg/16.7 mL,Injectable Solution,vial,Oncology / Antineoplastic,120.0,Medium
+MED072,Rituximab,500 mg/50 mL,Injectable Solution,vial,Biologics / Immunotherapy,890.0,Medium
+MED073,Filgrastim (G-CSF),300 mcg/0.5 mL,Prefilled Syringe,syringe,Hematologic / Colony-Stimulating Factor,215.0,Medium
+MED074,Immune Globulin IV (IVIG),10 g/100 mL (10%),IV Infusion,vial,Biologics / Immunotherapy,950.0,High
+MED075,Oxytocin,10 units/mL,Injectable Solution,ampule,Obstetric / Labor Induction,6.5,High

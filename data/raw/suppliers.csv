@@ -1,0 +1,130 @@
+supplier_id,supplier_name,medication_id,standard_lead_time_days,current_lead_time_days,reliability_score
+SUP001,Apex Rx Distribution,MED001,5,5,0.98
+SUP003,CarePoint Logistics,MED001,2,2,0.96
+SUP010,Junction Pharma Depot,MED002,7,7,0.93
+SUP001,Apex Rx Distribution,MED003,3,3,0.98
+SUP009,Integra MedSource,MED003,3,3,0.96
+SUP001,Apex Rx Distribution,MED004,4,4,0.96
+SUP001,Apex Rx Distribution,MED005,5,5,0.98
+SUP008,Horizon Medical Distribution,MED005,4,4,0.89
+SUP001,Apex Rx Distribution,MED006,5,5,0.98
+SUP004,DirectPharma Solutions,MED006,6,6,0.92
+SUP011,Kinetic Healthcare Logistics,MED007,3,3,0.95
+SUP012,Luminary Rx Group,MED007,5,5,0.94
+SUP001,Apex Rx Distribution,MED008,5,5,0.96
+SUP007,Genesis Prime Logistics,MED009,4,4,0.95
+SUP014,Nexus BioLogistics,MED009,7,7,0.89
+SUP007,Genesis Prime Logistics,MED010,4,4,0.95
+SUP002,Beacon Healthcare Supply,MED010,6,6,0.96
+SUP011,Kinetic Healthcare Logistics,MED011,5,5,0.95
+SUP007,Genesis Prime Logistics,MED012,4,4,0.95
+SUP006,Frontier Biologics,MED012,6,6,0.91
+SUP007,Genesis Prime Logistics,MED013,5,5,0.93
+SUP013,MedVantage Distribution,MED013,5,5,0.91
+SUP007,Genesis Prime Logistics,MED014,3,3,0.95
+SUP012,Luminary Rx Group,MED014,4,4,0.93
+SUP011,Kinetic Healthcare Logistics,MED015,3,3,0.95
+SUP007,Genesis Prime Logistics,MED015,5,5,0.95
+SUP001,Apex Rx Distribution,MED016,4,4,0.97
+SUP003,CarePoint Logistics,MED016,3,3,0.99
+SUP001,Apex Rx Distribution,MED017,5,5,0.96
+SUP008,Horizon Medical Distribution,MED017,6,6,0.88
+SUP001,Apex Rx Distribution,MED018,3,3,0.98
+SUP013,MedVantage Distribution,MED018,5,5,0.91
+SUP015,OmniHealth Wholesalers,MED019,3,3,0.98
+SUP014,Nexus BioLogistics,MED019,6,6,0.9
+SUP004,DirectPharma Solutions,MED020,5,5,0.92
+SUP002,Beacon Healthcare Supply,MED021,4,4,0.95
+SUP012,Luminary Rx Group,MED021,5,5,0.95
+SUP002,Beacon Healthcare Supply,MED022,4,4,0.95
+SUP011,Kinetic Healthcare Logistics,MED022,3,3,0.93
+SUP002,Beacon Healthcare Supply,MED023,4,4,0.94
+SUP015,OmniHealth Wholesalers,MED023,3,3,0.97
+SUP009,Integra MedSource,MED024,5,5,0.96
+SUP014,Nexus BioLogistics,MED024,8,8,0.91
+SUP002,Beacon Healthcare Supply,MED025,5,5,0.94
+SUP013,MedVantage Distribution,MED025,6,6,0.92
+SUP002,Beacon Healthcare Supply,MED026,6,6,0.95
+SUP014,Nexus BioLogistics,MED026,6,6,0.89
+SUP009,Integra MedSource,MED027,5,5,0.95
+SUP002,Beacon Healthcare Supply,MED028,5,5,0.97
+SUP011,Kinetic Healthcare Logistics,MED028,3,3,0.94
+SUP015,OmniHealth Wholesalers,MED029,3,3,0.99
+SUP011,Kinetic Healthcare Logistics,MED029,3,3,0.95
+SUP004,DirectPharma Solutions,MED030,5,5,0.91
+SUP011,Kinetic Healthcare Logistics,MED030,3,3,0.95
+SUP015,OmniHealth Wholesalers,MED031,3,3,0.98
+SUP007,Genesis Prime Logistics,MED031,3,3,0.93
+SUP009,Integra MedSource,MED032,3,3,0.98
+SUP004,DirectPharma Solutions,MED033,6,6,0.91
+SUP013,MedVantage Distribution,MED034,6,6,0.9
+SUP008,Horizon Medical Distribution,MED034,5,5,0.88
+SUP015,OmniHealth Wholesalers,MED035,2,2,0.98
+SUP003,CarePoint Logistics,MED036,2,2,0.96
+SUP009,Integra MedSource,MED036,4,4,0.96
+SUP015,OmniHealth Wholesalers,MED037,4,4,0.99
+SUP015,OmniHealth Wholesalers,MED038,2,2,0.97
+SUP013,MedVantage Distribution,MED038,5,5,0.93
+SUP006,Frontier Biologics,MED039,8,8,0.92
+SUP004,DirectPharma Solutions,MED040,5,5,0.92
+SUP010,Junction Pharma Depot,MED040,7,7,0.93
+SUP015,OmniHealth Wholesalers,MED041,2,2,0.97
+SUP008,Horizon Medical Distribution,MED041,4,4,0.91
+SUP003,CarePoint Logistics,MED042,2,2,0.98
+SUP003,CarePoint Logistics,MED043,2,2,0.98
+SUP014,Nexus BioLogistics,MED043,8,8,0.91
+SUP010,Junction Pharma Depot,MED044,5,5,0.93
+SUP004,DirectPharma Solutions,MED045,5,5,0.94
+SUP015,OmniHealth Wholesalers,MED045,2,2,0.98
+SUP015,OmniHealth Wholesalers,MED046,4,4,0.99
+SUP003,CarePoint Logistics,MED046,4,4,0.97
+SUP015,OmniHealth Wholesalers,MED047,3,3,0.98
+SUP015,OmniHealth Wholesalers,MED048,2,2,0.98
+SUP014,Nexus BioLogistics,MED048,6,6,0.88
+SUP015,OmniHealth Wholesalers,MED049,3,3,0.97
+SUP005,Evergreen Therapeutics Supply,MED049,5,5,0.96
+SUP005,Evergreen Therapeutics Supply,MED050,4,4,0.96
+SUP015,OmniHealth Wholesalers,MED051,2,2,0.98
+SUP015,OmniHealth Wholesalers,MED052,3,3,0.99
+SUP005,Evergreen Therapeutics Supply,MED052,5,5,0.96
+SUP010,Junction Pharma Depot,MED053,6,6,0.93
+SUP014,Nexus BioLogistics,MED053,7,7,0.89
+SUP015,OmniHealth Wholesalers,MED054,2,2,0.99
+SUP002,Beacon Healthcare Supply,MED054,6,6,0.94
+SUP015,OmniHealth Wholesalers,MED055,3,3,0.98
+SUP012,Luminary Rx Group,MED055,6,6,0.95
+SUP005,Evergreen Therapeutics Supply,MED056,5,5,0.96
+SUP008,Horizon Medical Distribution,MED057,4,25,0.88
+SUP005,Evergreen Therapeutics Supply,MED057,6,6,0.98
+SUP008,Horizon Medical Distribution,MED058,5,5,0.9
+SUP005,Evergreen Therapeutics Supply,MED058,4,4,0.94
+SUP015,OmniHealth Wholesalers,MED059,3,3,0.97
+SUP004,DirectPharma Solutions,MED059,7,7,0.94
+SUP015,OmniHealth Wholesalers,MED060,2,2,0.98
+SUP014,Nexus BioLogistics,MED060,7,7,0.92
+SUP004,DirectPharma Solutions,MED061,7,7,0.93
+SUP003,CarePoint Logistics,MED061,2,2,0.98
+SUP004,DirectPharma Solutions,MED062,5,5,0.91
+SUP003,CarePoint Logistics,MED062,3,3,0.98
+SUP004,DirectPharma Solutions,MED063,7,7,0.92
+SUP001,Apex Rx Distribution,MED063,3,3,0.98
+SUP005,Evergreen Therapeutics Supply,MED064,5,5,0.96
+SUP013,MedVantage Distribution,MED064,7,7,0.9
+SUP015,OmniHealth Wholesalers,MED065,2,2,0.99
+SUP008,Horizon Medical Distribution,MED065,4,4,0.91
+SUP004,DirectPharma Solutions,MED066,6,6,0.91
+SUP015,OmniHealth Wholesalers,MED066,2,2,0.98
+SUP012,Luminary Rx Group,MED067,6,6,0.95
+SUP006,Frontier Biologics,MED067,8,8,0.9
+SUP004,DirectPharma Solutions,MED068,6,6,0.92
+SUP004,DirectPharma Solutions,MED069,7,7,0.92
+SUP004,DirectPharma Solutions,MED070,6,6,0.89
+SUP014,Nexus BioLogistics,MED071,6,6,0.9
+SUP006,Frontier Biologics,MED071,6,6,0.89
+SUP006,Frontier Biologics,MED072,7,7,0.89
+SUP003,CarePoint Logistics,MED072,3,3,0.98
+SUP004,DirectPharma Solutions,MED073,6,6,0.92
+SUP008,Horizon Medical Distribution,MED073,6,6,0.9
+SUP006,Frontier Biologics,MED074,8,8,0.91
+SUP015,OmniHealth Wholesalers,MED074,2,2,0.99
+SUP004,DirectPharma Solutions,MED075,6,6,0.92
