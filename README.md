@@ -2,6 +2,8 @@
 
 **MedIntel** is an agentic clinical medication intelligence platform designed for healthcare supply-chain operations. It converts multi-variable operational signals (inventory velocity, demand acceleration, supplier disruption holds, in-transit purchase orders, and shelf-life collisions) into proactive, explainable decision intelligence.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/DrpadmajaSS/medintel)
+
 ---
 
 ## 🌟 Key Capabilities
